@@ -1,0 +1,49 @@
+header{
+background-image: linear-gradient(to right, rgb(16, 12, 219), rgba(0, 0, 0, 0.75));
+padding: 25px;
+text-align: center;
+font-size: 40px;
+color: white;
+font-weight: bold;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+
+}
+
+textarea{
+height: 200px;
+width: 900px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
+border: 1px solid black;
+
+} 
+
+.city-search-form{
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+#search{
+    width: 100%;
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #label-search{
+    font-size: 35px;
+
+  }
+
