@@ -13,8 +13,8 @@ For some reason, I was unable to view UV data but everything else worked just fi
 Click index.html or visit the deployment link!
 
 ## Screenshot
-![Alt text](https://i.gyazo.com/d2144455ad891907b6b6a836605b2f52.png "Picture of planner at 7:15, all grayed out.")
-![Alt text](https://i.gyazo.com/3ea8a0381b0c5d41c1b0a8c3deeaaa59.png "Schedule if it was noon")
+![Alt text](https://i.gyazo.com/f34479becf6e876f056985c040803240.png "Stored searches prior to selecting a city")
+![Alt text](https://i.gyazo.com/a0947cdee05a40238ae81f5b24b80191.png "Beirut weather and 5 day forecast")
 
 ## Deployment Link
-https://daelso.github.io/Work-day-planner/
+https://daelso.github.io/weather_tracker/
