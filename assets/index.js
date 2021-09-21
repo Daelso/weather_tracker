@@ -73,25 +73,22 @@ function getcurrentWeather() {
           var imageTest = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png"
           cityEmoji.empty()
           cityEmoji.append("<img src='"+ imageTest + "'></img>")
+
           previousSearchStrings.push(data.name)
-          localStorage.setItem("previous_cities", previousSearchStrings)
+
+          console.log(previousSearchStrings)
+
 
            var newLi = $("<button>").text(data.name)
-           newLi.attr("style", "background-color: blue; color: white;")
+           newLi.attr("style", "background-color: blue; color: white; border-radius: 4px; border: none; margin-left: 5px;")
            newLi.attr('id', 'previous_cities')
            previousSearches.append(newLi)
-        localStorage.setItem("searches", JSON.stringify(previousSearches))
 
 
 
+            localStorage.setItem("previous_searches", previousSearchStrings)
 
-        }
-
-
-
-
-        );
-  }
+        });}
 
 
   function getForecast() {
@@ -149,8 +146,7 @@ function getcurrentWeather() {
             day5_emoji.append("<img src='"+ imageTest5 + "'></img>")
 
 
-          });
-    }
+          });}
 
 
 searchButton.on('click', function (e) {
@@ -161,3 +157,15 @@ searchButton.on('click', function (e) {
 })
 
   
+function init () {
+
+
+    var testget = localStorage.getItem("previous_searches")
+
+    console.log(testget)
+
+
+
+}
+
+init()
