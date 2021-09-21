@@ -30,21 +30,81 @@
 
 <section>
 	<ul class="cityWeatherDisplay">
-		<li id="cityName">Test</li>
-		<li id="temp"></li>
-		<li id="wind"></li>
-		<li id="humidity"></li>
+		<li id="cityName">City Name:</li>
+		<li id="emoji"></li>
+		<li id="temp">Temperature:</li>
+		<li id="wind">Wind:</li>
+		<li id="humidity">Humidity:</li>
 		<li id="uv"></li>
 	</ul>
+</section>
 
-	<div class="card" style="width: 18rem;">
-		<img class="card-img-top" src="..." alt="Card image cap">
+<section>
+	<h1>5-Day Forecast</h1>
+	<div class="card" style="width: 18rem; display: inline-block;">
 		<div class="card-body">
-		  <h5 class="card-title">Card title</h5>
-		  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		  <a href="#" class="btn btn-primary">Go somewhere</a>
+		  <h5 id="day1" class="card-title">Pending Location</h5>
+			<ul id="day1_stats" class="card_text">
+				<li id="day1_emoji"></li>
+				<li id="day1_temp"></li>
+				<li id="day1_wind"></li>
+				<li id="day1_humid"></li>
+			</ul>
+
 		</div>
 	  </div>
+	  <div class="card" style="width: 18rem; display: inline-block;">
+		<div class="card-body">
+		  <h5 id="day2" class="card-title">Pending Location</h5>
+		  <ul id="day2_stats" class="card_text">
+			<li id="day2_emoji"></li>
+			<li id="day2_temp"></li>
+			<li id="day2_wind"></li>
+			<li id="day2_humid"></li>
+		</ul>
+		</div>
+	  </div>
+	  <div class="card" style="width: 18rem; display: inline-block;">
+		<div class="card-body">
+		  <h5 id="day3" class="card-title">Pending Location</h5>
+		  <ul id="day3_stats" class="card_text">
+			<li id="day3_emoji"></li>
+			<li id="day3_temp"></li>
+			<li id="day3_wind"></li>
+			<li id="day3_humid"></li>
+		</ul>
+		</div>
+	  </div>
+	  <div class="card" style="width: 18rem; display: inline-block;">
+		<div class="card-body">
+		  <h5 id="day4" class="card-title">Pending Location</h5>
+		  <ul id="day4_stats" class="card_text">
+			<li id="day4_emoji"></li>
+			<li id="day4_temp"></li>
+			<li id="day4_wind"></li>
+			<li id="day4_humid"></li>
+		</ul>
+		</div>
+	  </div>
+	  <div class="card" style="width: 18rem; display: inline-block;">
+		<div class="card-body">
+		  <h5 id="day5" class="card-title">Pending Location</h5>
+		  <ul id="day5_stats" class="card_text">
+			<li id="day5_emoji"></li>
+			<li id="day5_temp"></li>
+			<li id="day5_wind"></li>
+			<li id="day5_humid"></li>
+		</ul>
+		</div>
+	  </div>
+</section>
+<section>
+	<h2 style="text-align: center;">Previous Searches:</h2>
+<ul class = "previous">
+
+</ul>
+
+
 </section>
 
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
