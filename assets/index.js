@@ -169,3 +169,93 @@ function init () {
 }
 
 init()
+
+
+$(document).on('click', '#previous_cities', function (event) {
+  var clicked = event.target
+  console.log(clicked)
+  getcurrentWeatherTEST()
+  getForecastTEST()
+
+  function getcurrentWeatherTEST() {
+    var city = event.target.textContent
+      fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + weatherAPI)
+        .then(function (response) {
+            console.log(response)
+          return response.json();
+        })
+        .then(function (data) {
+            console.log(data)
+            cityName.text(data.name + " " + data.sys.country + " " + today)
+            cityTemp.text("Temp " + data.main.temp + " °F")
+            cityWind.text("Wind " + data.wind.speed + " MPH")
+            cityHumidity.text(data.main.humidity + " % humidity")
+            var imageTest = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png"
+            cityEmoji.empty()
+            cityEmoji.append("<img src='"+ imageTest + "'></img>")
+
+  
+  
+  
+  
+          });}
+
+          function getForecastTEST() {
+            var city = event.target.textContent
+              fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial" + "&appid=" + weatherAPI)
+                .then(function (response) {
+        
+                  return response.json();
+                })
+                .then(function (data) {
+                    console.log(data)
+                    day1.text(data.list[3].dt_txt)
+                    day2.text(data.list[11].dt_txt)
+                    day3.text(data.list[19].dt_txt)
+                    day4.text(data.list[27].dt_txt)
+                    day5.text(data.list[35].dt_txt)
+        
+                    day1_temp.text(data.list[3].main.temp + " °F")
+                    day2_temp.text(data.list[11].main.temp + " °F")
+                    day3_temp.text(data.list[19].main.temp + " °F")  
+                    day4_temp.text(data.list[27].main.temp + " °F")  
+                    day5_temp.text(data.list[35].main.temp + " °F")  
+        
+                    day1_wind.text(data.list[3].wind.speed + " MPH")
+                    day2_wind.text(data.list[11].wind.speed + " MPH")
+                    day3_wind.text(data.list[19].wind.speed + " MPH")
+                    day4_wind.text(data.list[27].wind.speed + " MPH")
+                    day5_wind.text(data.list[35].wind.speed + " MPH")
+        
+                    day1_humid.text(data.list[3].main.humidity + " % humidity")
+                    day2_humid.text(data.list[11].main.humidity + " % humidity")
+                    day3_humid.text(data.list[19].main.humidity + " % humidity")
+                    day4_humid.text(data.list[27].main.humidity + " % humidity")
+                    day5_humid.text(data.list[35].main.humidity + " % humidity")
+        
+                    var imageTest1 = "https://openweathermap.org/img/wn/" + data.list[3].weather[0].icon + ".png"
+                    day1_emoji.empty()
+                    day1_emoji.append("<img src='"+ imageTest1 + "'></img>")
+        
+                    var imageTest2 = "https://openweathermap.org/img/wn/" + data.list[11].weather[0].icon + ".png"
+                    day2_emoji.empty()
+                    day2_emoji.append("<img src='"+ imageTest2 + "'></img>")
+        
+                    var imageTest3 = "https://openweathermap.org/img/wn/" + data.list[19].weather[0].icon + ".png"
+                    day3_emoji.empty()
+                    day3_emoji.append("<img src='"+ imageTest3 + "'></img>")
+        
+                    var imageTest4 = "https://openweathermap.org/img/wn/" + data.list[27].weather[0].icon + ".png"
+                    day4_emoji.empty()
+                    day4_emoji.append("<img src='"+ imageTest4 + "'></img>")
+        
+        
+                    var imageTest5 = "https://openweathermap.org/img/wn/" + data.list[35].weather[0].icon + ".png"
+                    day5_emoji.empty()
+                    day5_emoji.append("<img src='"+ imageTest5 + "'></img>")
+        
+        
+                  });}
+})
+
+
