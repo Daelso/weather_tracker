@@ -20,6 +20,10 @@ var previousCities = $('#previous_cities')
 
 var previousSearchStrings = []
 
+var testeroni = previousSearchStrings.join()
+
+
+
 var today = new Date().toLocaleDateString()
 
 var weatherAPI = "1dee9ec087a3948d8a3c15a7bd25d92c" //my generated API key
@@ -76,7 +80,6 @@ function getcurrentWeather() {
 
           previousSearchStrings.push(data.name)
 
-          console.log(previousSearchStrings)
 
 
            var newLi = $("<button>").text(data.name)
@@ -86,7 +89,7 @@ function getcurrentWeather() {
 
 
 
-            localStorage.setItem("previous_searches", previousSearchStrings)
+            localStorage.setItem("previous_searches", JSON.stringify(previousSearchStrings))
 
         });}
 
@@ -159,13 +162,20 @@ searchButton.on('click', function (e) {
   
 function init () {
 
+if("previous_searches" in localStorage){
+  var retrievedData = localStorage.getItem("previous_searches");
+  var movies2 = JSON.parse(retrievedData);
 
-    var testget = localStorage.getItem("previous_searches")
-
-    console.log(testget)
-
-
-
+  for (var i = 0; i < movies2.length; i++) {
+    console.log(movies2[i])
+    var newLi = $("<button>").text(movies2[i])
+    newLi.attr("style", "background-color: blue; color: white; border-radius: 4px; border: none; margin-left: 5px;")
+    newLi.attr('id', 'previous_cities')
+    previousSearches.append(newLi)
+    
+  }
+    
+}
 }
 
 init()
